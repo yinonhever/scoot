@@ -51,6 +51,7 @@
     padding: 0 $padding-side-mobile;
     height: 6.4rem;
     position: relative;
+    z-index: 999;
 
     &__logo {
       position: absolute;
@@ -65,11 +66,10 @@
 
     &__navigation {
       position: fixed;
-      top: 0;
+      top: 6.4rem;
       left: 0;
       width: 100vw;
       height: 100%;
-      z-index: -1;
       background-color: rgba(0, 0, 0, 0.75);
       margin: 0;
       visibility: hidden;
@@ -84,11 +84,11 @@
 
     &__nav-list {
       position: absolute;
-      top: 6.4rem;
+      top: 0;
       left: 0;
       height: 100%;
       background-color: #333a44;
-      padding: 6.4rem 3.2rem 9rem 3.2rem;
+      padding: 6.4rem $padding-side-mobile 9rem $padding-side-mobile;
       text-align: center;
       margin: auto;
       flex-direction: column;
@@ -108,6 +108,7 @@
 
     &__nav-link {
       color: $color-grey-light;
+      font-size: 1.8rem;
       visibility: hidden;
       opacity: 0;
       transition: all 0.3s 0.3s;

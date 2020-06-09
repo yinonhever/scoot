@@ -1,5 +1,6 @@
 $(".header__nav-toggle").on("click", function () {
     $(".header__navigation").toggleClass("open");
+    $("body").toggleClass("no-scroll");
 
     const menuOpen = $(".header__navigation").hasClass("open");
 
@@ -10,3 +11,5 @@ $(".header__nav-toggle").on("click", function () {
         $(this).prop("src", "assets/icons/hamburger.svg");
     }
 })
+
+

@@ -12,4 +12,13 @@ html {
 
 body {
   box-sizing: border-box;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
+
+::selection {
+  background-color: $color-primary;
+  color: #fff;
 }
