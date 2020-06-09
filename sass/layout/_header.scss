@@ -1,0 +1,138 @@
+.header {
+  padding: 2.2rem $padding-side-desktop;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+
+  @include respond(tablet) {
+    padding: 2.2rem $padding-side-tablet-sm;
+  }
+
+  &__nav-toggle {
+    display: none;
+  }
+
+  &__navigation {
+    margin-left: 8rem;
+    flex: 1;
+
+    @include respond(tablet) {
+      margin-left: 5.5vw;
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__nav-link {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.6s;
+
+    &:hover {
+      color: $color-primary;
+    }
+
+    &:not(:last-child) {
+      margin-right: 3.2rem;
+    }
+  }
+
+  &__btn {
+    margin-left: auto;
+  }
+
+  /*** MOBILE VIEW ***/
+  @include respond(mobile) {
+    padding: 0 $padding-side-mobile;
+    height: 6.4rem;
+    position: relative;
+
+    &__logo {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &__nav-toggle {
+      display: block;
+    }
+
+    &__navigation {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100%;
+      z-index: -1;
+      background-color: rgba(0, 0, 0, 0.75);
+      margin: 0;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.3s;
+
+      &.open {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    &__nav-list {
+      position: absolute;
+      top: 6.4rem;
+      left: 0;
+      height: 100%;
+      background-color: #333a44;
+      padding: 6.4rem 3.2rem 9rem 3.2rem;
+      text-align: center;
+      margin: auto;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 0;
+      overflow: hidden;
+      transition: width 0.6s;
+    }
+
+    &__navigation.open &__nav-list {
+      width: 25.6rem;
+
+      @media only screen and (max-width: 315px) {
+        width: 85vw;
+      }
+    }
+
+    &__nav-link {
+      color: $color-grey-light;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.3s 0.3s;
+
+      &:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 2.4rem;
+      }
+    }
+
+    &__btn {
+      margin-left: 0;
+      margin-top: auto;
+      align-self: stretch;
+      padding-left: 0;
+      padding-right: 0;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.3s 0.3s;
+    }
+
+    &__navigation.open &__nav-link,
+    &__navigation.open &__btn {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
