@@ -112,6 +112,7 @@
       visibility: hidden;
       opacity: 0;
       transform: scale(0);
+      backface-visibility: hidden;
       transition: all 0.3s 0.6s;
 
       &:not(:last-child) {
@@ -129,6 +130,7 @@
       visibility: hidden;
       opacity: 0;
       transform: scale(0);
+      backface-visibility: hidden;
       transition: all 0.3s 0.6s;
     }
 
