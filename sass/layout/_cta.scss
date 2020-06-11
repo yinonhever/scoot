@@ -1,0 +1,133 @@
+.cta {
+  padding: 10.2rem $padding-side-desktop;
+  background-color: $color-dark;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+
+  @include respond(tablet) {
+    padding: 6.2rem 0;
+    flex-direction: column;
+  }
+
+  @include respond(mobile) {
+    padding: 8.8rem $padding-side-mobile;
+  }
+
+  & > *:not(.cta__pattern) {
+    position: relative;
+    z-index: 10;
+  }
+
+  &__text {
+    color: #fff;
+    width: 41.5rem;
+
+    @include respond(tablet) {
+      width: 45.7rem;
+      margin-bottom: 4.8rem;
+      text-align: center;
+    }
+
+    @include respond(mobile) {
+      font-size: 3.2rem;
+      width: 100%;
+      max-width: 38rem;
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__download {
+    display: flex;
+  }
+
+  &__download-link {
+    text-decoration: none;
+
+    &:not(:last-child) {
+      margin-right: 1.8rem;
+
+      @include respond(mobile) {
+        margin-right: 1.3rem;
+      }
+    }
+  }
+
+  &__download-button {
+    display: flex;
+    align-items: center;
+    padding: 0.9rem 1.6rem;
+    background-color: $color-grey-light;
+    color: $color-dark;
+    border-radius: 4px;
+    transition: opacity 0.5s;
+
+    @include respond(mobile) {
+      height: 4rem;
+      padding: 0.6rem 1.1rem;
+      justify-content: space-between;
+
+      &--apple {
+        width: 11.3rem;
+      }
+
+      &--google {
+        width: 13rem;
+      }
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__download-icon {
+    margin-right: 1.2rem;
+    font-size: 3.5rem;
+
+    @include respond(mobile) {
+      margin-right: 8px;
+      font-size: 2rem;
+    }
+  }
+
+  &__download-text {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+
+    p:first-child {
+      font-size: 1rem;
+      letter-spacing: -0.45px;
+      margin-bottom: 1px;
+
+      @include respond(mobile) {
+        font-size: 7px;
+      }
+    }
+
+    p:last-child {
+      font-size: 2rem;
+      letter-spacing: -0.89px;
+      line-height: 1.2;
+
+      @include respond(mobile) {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  &__pattern {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 80.1vw;
+    transform: translateX(15%);
+
+    @include respond(tablet) {
+      height: 50%;
+      width: auto;
+    }
+  }
+}
