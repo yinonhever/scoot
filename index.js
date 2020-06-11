@@ -1,3 +1,5 @@
+// MANAGING THE MOBILE MENU
+
 $(".header__nav-toggle").on("click", function () {
     $(".header__navigation").toggleClass("open");
     $("body").toggleClass("no-scroll");
@@ -12,4 +14,9 @@ $(".header__nav-toggle").on("click", function () {
     }
 })
 
+$(".header__btn").on("click", function() {
+    $(".header__navigation").removeClass("open");
+    $("body").removeClass("no-scroll");
+    $(".header__nav-toggle").prop("src", "assets/icons/hamburger.svg");
+})
 

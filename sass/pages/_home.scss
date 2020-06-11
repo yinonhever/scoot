@@ -1,0 +1,265 @@
+/*** INTRO SECTION ***/
+.intro {
+  position: relative;
+  overflow: hidden;
+
+  &__bg {
+    width: 100%;
+  }
+
+  &__content {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+
+    @include respond(tablet) {
+      top: 21%;
+      left: 50%;
+      transform: translate(-50%, 0);
+      text-align: center;
+      width: 57.3rem;
+    }
+
+    @include respond(mobile) {
+      top: 17.7%;
+      width: 100%;
+      max-width: 50rem;
+      padding: 0 $padding-side-mobile;
+    }
+  }
+
+  &__heading {
+    color: #fff;
+    width: 50rem;
+    margin-left: $padding-side-desktop;
+
+    @include respond(tablet) {
+      margin-left: 0;
+      margin-bottom: 2.4rem;
+      width: auto;
+    }
+  }
+
+  &__text-container {
+    padding-left: calc(#{$padding-side-desktop} + 6.5vw);
+    position: relative;
+    margin-bottom: 5rem;
+
+    @include respond(tablet) {
+      padding-left: 0;
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__text {
+    width: 40.5rem;
+
+    @include respond(tablet) {
+      width: auto;
+    }
+  }
+
+  &__btn {
+    margin-left: calc(#{$padding-side-desktop} + 6.5vw);
+
+    @include respond(tablet) {
+      margin-left: 0;
+    }
+  }
+
+  &__pattern {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-1rem);
+  }
+
+  &__line {
+    left: 0;
+    width: calc(#{$padding-side-desktop} + 2.6vw);
+
+    @include respond(tablet) {
+      display: none;
+    }
+  }
+
+  &__arrow {
+    left: calc(100% + 2.7vw);
+    width: 31vw;
+
+    @media only screen and (max-width: 1150px) {
+      width: 25vw;
+    }
+
+    @include respond(tablet) {
+      width: 58vw;
+      left: -12.7vw;
+      top: calc(100% + 12.5rem);
+      transform: translate(-28.4%, 0);
+
+      @media only screen and (max-width: 725px) {
+        transform: translate(-28.4%, -2rem);
+      }
+    }
+
+    @include respond(mobile) {
+      display: none;
+    }
+  }
+
+  &__circle {
+    position: absolute;
+    top: 66%;
+    right: 1.5rem;
+    width: 16.25vw;
+    transform: translateX(26.5%);
+
+    @media only screen and (max-width: 1300px) {
+      width: 14vw;
+    }
+
+    @include respond(tablet) {
+      top: 83%;
+      right: 3rem;
+      width: 23.4rem;
+    }
+
+    @include respond(mobile) {
+      display: none;
+    }
+  }
+
+  &__pattern-mobile {
+    display: none;
+
+    @include respond(mobile) {
+      display: block;
+      position: absolute;
+      bottom: 5.4%;
+      left: 0;
+      width: 119vw;
+      transform: translateX(-70%);
+
+      @media only screen and (min-width: 415px) {
+        bottom: 15%;
+      }
+
+      @media only screen and (min-width: 600px) {
+        bottom: 5%;
+        width: 90vw;
+      }
+    }
+
+    @media only screen and (max-width: 350px) {
+      display: none;
+    }
+  }
+}
+
+/*** ICONS SECTION ***/
+.icons-section {
+  padding: 16rem $padding-side-desktop;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+
+  @include respond(tablet) {
+    flex-direction: column;
+    align-items: center;
+    padding: 12rem 0;
+    overflow: initial;
+  }
+
+  @include respond(mobile) {
+    padding: 12rem $padding-side-mobile;
+  }
+
+  &__item {
+    width: 24.3vw;
+    max-width: 35rem;
+    position: relative;
+
+    @include respond(tablet) {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      width: 57.3rem;
+      max-width: 100%;  
+    }
+
+    @include respond(mobile) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      max-width: 50rem;
+    }
+
+    &:not(:last-child) {
+      @include respond(tablet) {
+        margin-bottom: 4rem;
+      }
+
+      @include respond(mobile) {
+        margin-bottom: 4.8rem;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 70rem;
+      height: 1.5rem;
+      left: 0;
+      top: 4.8rem;
+      background-color: $color-grey-light;
+      transform: translate(-100%, -50%);
+      z-index: -1;
+
+      @include respond(tablet) {
+        width: 1.5rem;
+        height: 20rem;
+        left: 3.7rem;
+        top: 0;
+        transform: translate(-50%, -100%);
+      }
+
+      @include respond(mobile) {
+        display: none;
+      }
+    }
+  }
+
+  &__content {
+    @include respond(tablet) {
+      width: 39.8rem;
+    }
+
+    @include respond(mobile) {
+      width: 100%;
+    }
+  }
+
+  &__icon {
+    height: 9.6rem;
+
+    @include respond(tablet) {
+      height: 7.4rem;
+    }
+
+    @include respond(mobile) {
+      height: 5.6rem;
+      margin-bottom: 2.4rem;
+    }
+  }
+
+  &__title {
+    margin-bottom: 2.7rem;
+
+    @include respond(mobile) {
+      margin-bottom: 2.4rem;
+    }
+  }
+}
