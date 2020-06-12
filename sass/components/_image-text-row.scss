@@ -62,6 +62,7 @@
 
     @include respond(tablet) {
       transform: none !important;
+      min-width: 45rem;
     }
 
     @include respond(mobile) {

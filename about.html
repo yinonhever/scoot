@@ -35,16 +35,37 @@
     <div class="header__navigation">
       <div class="header__nav-list">
         <a href="about.html" class="header__nav-link">About</a>
-        <a href="locations.html" class="header__nav-link">Locations</a>
+        <a href="locations.html" class="header__nav-link">Location</a>
         <a href="careers.html" class="header__nav-link">Careers</a>
         <a href="#cta" class="btn header__btn">Get Scootin</a>
       </div>
     </div>
   </header>
 
+  <main>
+    <section class="page-heading">
+      <picture>
+        <source
+          srcset="assets/images/about-hero-tablet.jpg"
+          media="(max-width: 1100px) and (min-width: 501px)"
+        />
+        <source
+          srcset="assets/images/about-hero-mobile.jpg"
+          media="(max-width: 500px)"
+        />
+        <img
+          alt="careers-location"
+          src="assets/images/about-hero-desktop.jpg"
+          class="page-heading__bg"
+        />
+      </picture>
 
-
-  About
+      <div class="page-heading__container">
+        <h1 class="heading-1 page-heading__heading">About</h1>
+        <img src="assets/patterns/white-circles.svg" alt="circles" class="page-heading__circles">
+      </div>
+    </section>
+  </main>
 
 
 
@@ -123,9 +144,34 @@
 
 
 
-  About
-  Location
-  Careers
+  <footer class="footer">
+    <a href="/">
+      <img src="assets/logo-white.svg" alt="logo" class="logo footer__logo" />
+    </a>
+    <div class="footer__nav">
+      <a href="about.html" class="footer__nav-link">About</a>
+      <a href="locations.html" class="footer__nav-link">Location</a>
+      <a href="careers.html" class="footer__nav-link">Careers</a>
+    </div>
+    <div class="footer__social">
+      <a href="/" class="footer__social-link">
+        <svg class="footer__social-icon">
+          <use xlink:href="assets/icons/facebook.svg#icon"></use>
+        </svg>
+      </a>
+      <a href="/" class="footer__social-link">
+        <svg class="footer__social-icon footer__social-icon--small">
+          <use xlink:href="assets/icons/twitter.svg#icon"></use>
+        </svg>
+      </a>
+      <a href="/" class="footer__social-link">
+        <svg class="footer__social-icon">
+          <use xlink:href="assets/icons/instagram.svg#icon"></use>
+        </svg>
+      </a>
+    </div>
+  </footer>
+  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="index.js"></script>
 </body>

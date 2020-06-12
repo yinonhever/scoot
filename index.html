@@ -35,7 +35,7 @@
       <div class="header__navigation">
         <div class="header__nav-list">
           <a href="about.html" class="header__nav-link">About</a>
-          <a href="locations.html" class="header__nav-link">Locations</a>
+          <a href="locations.html" class="header__nav-link">Location</a>
           <a href="careers.html" class="header__nav-link">Careers</a>
           <a href="#cta" class="btn header__btn">Get Scootin</a>
         </div>
@@ -47,11 +47,11 @@
         <picture>
           <source
             srcset="assets/images/home-hero-tablet.jpg"
-            media="(max-width: 1100px) and (min-width: 601px)"
+            media="(max-width: 1100px) and (min-width: 501px)"
           />
           <source
             srcset="assets/images/home-hero-mobile.jpg"
-            media="(max-width: 600px)"
+            media="(max-width: 500px)"
           />
           <img
             alt="hero-bg"
@@ -165,7 +165,9 @@
           />
         </div>
         <div class="image-text-row__content">
-          <h2 class="heading-2 mb-sm image-text-row__heading">Easy to use riding telemetry</h2>
+          <h2 class="heading-2 mb-sm image-text-row__heading">
+            Easy to use riding telemetry
+          </h2>
           <p class="image-text-row__text">
             The Scoot app is available with riding telemetry. This means it can
             show you your average speed, how long you've been using the scooter,
@@ -195,7 +197,9 @@
           />
         </div>
         <div class="image-text-row__content">
-          <h2 class="heading-2 mb-sm image-text-row__heading">Coming to a city near you</h2>
+          <h2 class="heading-2 mb-sm image-text-row__heading">
+            Coming to a city near you
+          </h2>
           <p class="image-text-row__text">
             Scoot is available in 4 major cities so far. We’re expanding
             rapidly, so be sure to let us know if you want to see us in your
@@ -225,7 +229,9 @@
           />
         </div>
         <div class="image-text-row__content">
-          <h2 class="heading-2 mb-sm image-text-row__heading">Zero hassle payments</h2>
+          <h2 class="heading-2 mb-sm image-text-row__heading">
+            Zero hassle payments
+          </h2>
           <p class="image-text-row__text">
             Our payment is as easy as one two three. We accept most credit cards
             and debit cards. You can also link your PayPal account inside the
@@ -258,19 +264,41 @@
             </div>
           </a>
         </div>
-        <img class="cta__pattern" src="assets/patterns/semi-circles.svg" alt="semi-circles">
+        <img
+          class="cta__pattern"
+          src="assets/patterns/semi-circles.svg"
+          alt="semi-circles"
+        />
       </section>
     </main>
 
-    <!-- 
-
-  
-
-
-
-  About
-  Location
-  Careers -->
+    <footer class="footer">
+      <a href="/">
+        <img src="assets/logo-white.svg" alt="logo" class="logo footer__logo" />
+      </a>
+      <div class="footer__nav">
+        <a href="about.html" class="footer__nav-link">About</a>
+        <a href="locations.html" class="footer__nav-link">Location</a>
+        <a href="careers.html" class="footer__nav-link">Careers</a>
+      </div>
+      <div class="footer__social">
+        <a href="/" class="footer__social-link">
+          <svg class="footer__social-icon">
+            <use xlink:href="assets/icons/facebook.svg#icon"></use>
+          </svg>
+        </a>
+        <a href="/" class="footer__social-link">
+          <svg class="footer__social-icon footer__social-icon--small">
+            <use xlink:href="assets/icons/twitter.svg#icon"></use>
+          </svg>
+        </a>
+        <a href="/" class="footer__social-link">
+          <svg class="footer__social-icon">
+            <use xlink:href="assets/icons/instagram.svg#icon"></use>
+          </svg>
+        </a>
+      </div>
+    </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="index.js"></script>
