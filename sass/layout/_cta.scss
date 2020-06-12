@@ -32,7 +32,6 @@
     }
 
     @include respond(mobile) {
-      font-size: 3.2rem;
       width: 100%;
       max-width: 38rem;
       margin-bottom: 4rem;

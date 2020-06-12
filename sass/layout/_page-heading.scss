@@ -1,5 +1,6 @@
 .page-heading {
   position: relative;
+  margin-bottom: 12.5rem;
 
   &__bg {
     width: 100%;
@@ -15,6 +16,11 @@
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
+
+    @include respond(mobile) {
+      left: 0;
+      justify-content: center;
+    }
   }
 
   &__heading {
@@ -24,5 +30,9 @@
   &__circles {
     width: 23.4rem;
     transform: translateX(13.25%);
+
+    @include respond(mobile) {
+      display: none;
+    }
   }
 }

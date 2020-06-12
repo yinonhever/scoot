@@ -29,12 +29,23 @@ h4 {
   font-size: 4.8rem;
   letter-spacing: -2.14px;
   line-height: 1;
+
+  @include respond(mobile) {
+    font-size: 3.2rem;
+    letter-spacing: -1.43px;
+  }
 }
 
 .heading-3 {
   font-size: 4rem;
   letter-spacing: -1.79px;
   line-height: 1.2;
+
+  @include respond(mobile) {
+    font-size: 2.4rem;
+    letter-spacing: -1.07px;
+    line-height: 1.167;
+  }
 }
 
 .heading-4 {
@@ -43,8 +54,14 @@ h4 {
   line-height: 1.167;
 
   @include respond(mobile) {
-    font-size: 2rem;
-    letter-spacing: -0.89px;
-    line-height: 1.4;
+    &:not(.features__title) {
+      font-size: 2rem;
+      letter-spacing: -0.89px;
+      line-height: 1.4;
+    }
   }
+}
+
+.section-heading {
+  text-align: center;
 }

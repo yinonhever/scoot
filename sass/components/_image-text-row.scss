@@ -21,6 +21,14 @@
     margin-bottom: 17.8rem;
   }
 
+  &.low-spacing {
+    margin-bottom: 12rem !important;
+
+    @include respond(mobile) {
+      margin-bottom: 10rem !important;
+    }
+  }
+
   &--right {
     flex-direction: row-reverse;
     padding-left: $padding-side-desktop;
@@ -102,6 +110,10 @@
         transform: translateX(53%) !important;
       }
     }
+
+    &--upward {
+      bottom: 4rem !important;
+    }
   }
 
   &--right &__arrow {
@@ -115,6 +127,12 @@
     }
   }
 
+  &--right &__arrow--long-mobile {
+    @include respond(mobile) {
+      transform: translateX(53%) !important;
+    }
+  }
+
   &--left &__arrow {
     top: 0;
     left: 0;
@@ -122,6 +140,12 @@
 
     @include respond(mobile) {
       transform: translateX(-65%) rotate(180deg);
+    }
+  }
+
+  &--left &__arrow--long-mobile {
+    @include respond(mobile) {
+      transform: translateX(-53%) rotate(180deg) !important;
     }
   }
 
@@ -175,7 +199,6 @@
 
     @include respond(mobile) {
       width: 100%;
-      font-size: 3.2rem;
       margin-bottom: 3.2rem;
     }
   }

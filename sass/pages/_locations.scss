@@ -1,0 +1,54 @@
+.map {
+  &__tag {
+    background-color: $color-primary;
+    width: 18.9rem;
+    height: 7rem;
+    font-size: 2.3rem;
+    position: relative;
+
+    @include respond(tablet) {
+      width: 12rem;
+      height: 3rem;
+      font-size: 1.3rem;
+    }
+
+    @include respond(mobile) {
+      width: 1.6rem;
+      height: 1.6rem;
+      border-radius: 50%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 4rem;
+      height: 2rem;
+      background-color: $color-primary;
+      top: 98%;
+      left: 50%;
+      transform: translateX(-50%);
+      clip-path: polygon(50% 100%, 0 0, 100% 0);
+
+      @include respond(tablet) {
+        width: 2rem;
+        height: 1rem;
+      }
+
+      @include respond(mobile) {
+        display: none;
+      }
+    }
+  }
+
+  &__tag-name {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @include respond(mobile) {
+      display: none;
+    }
+  }
+}

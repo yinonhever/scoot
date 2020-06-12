@@ -1,11 +1,11 @@
 .header {
-  padding: 2.2rem $padding-side-desktop;
+  padding: 2.1rem $padding-side-desktop;
   background-color: #fff;
   display: flex;
   align-items: center;
 
   @include respond(tablet) {
-    padding: 2.2rem $padding-side-tablet-sm;
+    padding: 2.1rem $padding-side-tablet-sm;
   }
 
   &__nav-toggle {
