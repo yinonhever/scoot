@@ -1,0 +1,76 @@
+.accordion {
+  &__item {
+    background-color: $color-snow;
+
+    &:not(:last-child) {
+      margin-bottom: 1.6rem;
+    }
+
+    &.active {
+      padding-bottom: 3.2rem;
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3.2rem 4rem;
+    cursor: pointer;
+
+    @include respond(tablet) {
+      padding-right: 3.2rem;
+    }
+
+    @include respond(mobile) {
+      padding: 3.2rem 2.8rem 3.2rem 3.2rem;
+    }
+
+    &:hover {
+      background-color: $color-pink;
+
+      @include respond(tablet) {
+        background-color: $color-snow; // no hover effect on touch devices
+      }
+    }
+  }
+
+  &__item.active &__top {
+    padding-bottom: 2.4rem;
+  }
+
+  &__title {
+    @include respond(mobile) {
+      font-size: 1.8rem;
+      letter-spacing: -0.8px;
+      line-height: 1.333;
+    }
+  }
+
+  &__icon {
+    transition: all 0.5s;
+    margin-left: 1.6rem;
+  }
+
+  &__item.active &__icon {
+    transform: rotate(180deg);
+  }
+
+  &__content {
+    display: none;
+    padding: 0 4rem;
+    animation: slideUp 0.6s;
+
+    @include respond(tablet) {
+      padding-right: 3.2rem;
+    }
+
+    @include respond(mobile) {
+      padding: 0 2.8rem 0 3.2rem;
+    }
+  }
+
+  &__item.active &__content {
+    display: block;
+  }
+}

@@ -1,12 +1,12 @@
 .faq {
-  padding: 0 $padding-side-desktop 12rem;
+  padding: 0 $padding-side-desktop 10rem;
 
   @include respond(tablet) {
-    padding: 0 $padding-side-tablet-sm 12rem;
+    padding: 0 $padding-side-tablet-sm 10rem;
   }
 
   @include respond(mobile) {
-    padding: 0 $padding-side-mobile 12rem;
+    padding: 0 $padding-side-mobile 10rem;
   }
 
   &__heading {
@@ -42,6 +42,9 @@
 
     @include respond(tablet) {
       flex: initial;
+      width: 100%;
+      max-width: 70rem;
+      margin: auto;
     }
   }
 }

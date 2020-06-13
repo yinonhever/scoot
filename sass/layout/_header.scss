@@ -111,8 +111,7 @@
       font-size: 1.8rem;
       visibility: hidden;
       opacity: 0;
-      transform: scale(0);
-      transition: all 0.3s 0.5s;
+      transform: translateX(3rem);
 
       &:not(:last-child) {
         margin-right: 0;
@@ -128,15 +127,14 @@
       padding-right: 0;
       visibility: hidden;
       opacity: 0;
-      transform: scale(0);
-      transition: all 0.3s 0.5s;
+      transform: translateX(3rem);
     }
 
     &__navigation.open &__nav-link,
     &__navigation.open &__btn {
       visibility: visible;
       opacity: 1;
-      transform: scale(1);
+      transform: translateX(0);
     }
   }
 }
