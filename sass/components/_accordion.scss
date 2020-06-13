@@ -41,9 +41,9 @@
 
   &__title {
     @include respond(mobile) {
-      font-size: 1.8rem;
-      letter-spacing: -0.8px;
-      line-height: 1.333;
+      font-size: 1.8rem !important;
+      letter-spacing: -0.8px !important;
+      line-height: 1.333 !important;
     }
   }
 
