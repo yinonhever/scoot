@@ -114,9 +114,6 @@
       color: $color-grey-light;
       font-size: 1.8rem;
       display: none;
-      // visibility: hidden;
-      // opacity: 0;
-      // transform: translateX(3rem);
 
       &:not(:last-child) {
         margin-right: 0;
@@ -131,17 +128,12 @@
       padding-left: 0;
       padding-right: 0;
       display: none;
-      // visibility: hidden;
-      // opacity: 0;
-      // transform: translateX(3rem);
     }
 
     &__navigation.open &__nav-link,
     &__navigation.open &__btn {
+      // animation for the these elements is applied using keyframes and javascript
       display: block;
-      // visibility: visible;
-      // opacity: 1;
-      // transform: translateX(0);
     }
   }
 }
