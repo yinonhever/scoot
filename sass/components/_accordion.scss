@@ -17,6 +17,7 @@
     align-items: center;
     padding: 3.2rem 4rem;
     cursor: pointer;
+    transition: background-color 0.3s;
 
     @include respond(tablet) {
       padding-right: 3.2rem;

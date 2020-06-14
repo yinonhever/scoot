@@ -2,6 +2,10 @@
   position: relative;
   margin-bottom: 12.5rem;
 
+  @include respond(mobile) {
+    margin-bottom: 8rem;
+  }
+
   &__bg {
     width: 100%;
   }
@@ -16,6 +20,10 @@
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
+
+    @include respond(tablet) {
+      left: $padding-side-tablet-lg;
+    }
 
     @include respond(mobile) {
       left: 0;

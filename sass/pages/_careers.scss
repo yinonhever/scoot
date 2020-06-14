@@ -1,0 +1,66 @@
+.jobs {
+  padding: 0 $padding-side-desktop 16rem;
+
+  @include respond(tablet) {
+    margin-top: -2.5rem;
+    padding: 0 $padding-side-tablet-sm 12rem;
+  }
+
+  @include respond(mobile) {
+    padding: 0 $padding-side-mobile 12rem;
+    max-width: 55rem;
+    margin: auto;
+  }
+
+  &__listing {
+    background-color: $color-snow;
+    padding: 3.7rem 6.4rem 3.7rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include respond(tablet) {
+      padding: 3.7rem 4.8rem;
+    }
+
+    @include respond(mobile) {
+      flex-direction: column;
+      text-align: center;
+      padding: 3.6rem 3.2rem 3.2rem;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 2.4rem;
+
+      @include respond(tablet) {
+        margin-bottom: 1.6rem;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 0.8rem;
+
+    @include respond(mobile) {
+      font-size: 1.8rem !important;
+      letter-spacing: -0.8px !important;
+      line-height: 1.333 !important;
+      margin-bottom: 0.4rem;
+    }
+  }
+
+  &__location {
+    color: $color-dark;
+
+    @include respond(mobile) {
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  &__btn {
+    @include respond(mobile) {
+      align-self: stretch;
+      padding: 1.4rem 0;
+    }
+  }
+}

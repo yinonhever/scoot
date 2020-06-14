@@ -64,7 +64,7 @@ h4 {
   letter-spacing: -1.07px;
   line-height: 1.167; }
   @media only screen and (max-width: 700px) {
-    .heading-4:not(.features__title):not(.features__number) {
+    .heading-4:not(.features__title):not(.features__number):not(.locations-list__name) {
       font-size: 2rem;
       letter-spacing: -0.89px;
       line-height: 1.4; } }
@@ -104,6 +104,8 @@ h4 {
   font-family: "Space Mono", monospace;
   border: 3px solid #fcb72b;
   transition: color 0.35s, background-color 0.7s; }
+  .btn--wide {
+    padding: 1.4rem 6.7rem; }
   .btn:hover {
     background-color: transparent;
     color: #fcb72b; }
@@ -120,7 +122,8 @@ h4 {
   justify-content: space-between;
   align-items: center;
   padding: 3.2rem 4rem;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: background-color 0.3s; }
   @media only screen and (max-width: 1100px) {
     .accordion__top {
       padding-right: 3.2rem; } }
@@ -326,7 +329,10 @@ h4 {
     flex: 1; }
     @media only screen and (max-width: 1100px) {
       .header__navigation {
-        margin-left: 5.15vw; } }
+        margin-left: 8%; } }
+    @media only screen and (max-width: 710px) {
+      .header__navigation {
+        margin-left: 5%; } }
   .header__nav-list {
     display: flex;
     align-items: center; }
@@ -416,6 +422,9 @@ h4 {
 .page-heading {
   position: relative;
   margin-bottom: 12.5rem; }
+  @media only screen and (max-width: 700px) {
+    .page-heading {
+      margin-bottom: 8rem; } }
   .page-heading__bg {
     width: 100%; }
   .page-heading__container {
@@ -428,6 +437,9 @@ h4 {
     justify-content: space-between;
     align-items: center;
     overflow: hidden; }
+    @media only screen and (max-width: 1100px) {
+      .page-heading__container {
+        left: 12.6vw; } }
     @media only screen and (max-width: 700px) {
       .page-heading__container {
         left: 0;
@@ -867,46 +879,201 @@ h4 {
         max-width: 70rem;
         margin: auto; } }
 
-.map__tag {
-  background-color: #fcb72b;
-  width: 18.9rem;
-  height: 7rem;
-  font-size: 2.3rem;
-  position: relative; }
+/*** CONTAINER FOR THE MAIN CONTENT ***/
+.locations-container {
+  padding: 0 11.45vw 12rem; }
   @media only screen and (max-width: 1100px) {
-    .map__tag {
-      width: 12rem;
-      height: 3rem;
-      font-size: 1.3rem; } }
+    .locations-container {
+      padding: 0 4rem 12rem; } }
   @media only screen and (max-width: 700px) {
-    .map__tag {
-      width: 1.6rem;
-      height: 1.6rem;
-      border-radius: 50%; } }
-  .map__tag::after {
-    content: "";
-    position: absolute;
-    width: 4rem;
-    height: 2rem;
-    background-color: #fcb72b;
-    top: 98%;
-    left: 50%;
-    transform: translateX(-50%);
-    clip-path: polygon(50% 100%, 0 0, 100% 0); }
-    @media only screen and (max-width: 1100px) {
-      .map__tag::after {
-        width: 2rem;
-        height: 1rem; } }
-    @media only screen and (max-width: 700px) {
-      .map__tag::after {
-        display: none; } }
+    .locations-container {
+      padding: 0 3.2rem 7.2rem; } }
 
-.map__tag-name {
+/*** MAP SECTION ***/
+.map {
+  position: relative;
   width: 100%;
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%); }
+  margin-bottom: 12rem; }
+  @media only screen and (max-width: 1100px) {
+    .map {
+      margin-bottom: 6.4rem; } }
   @media only screen and (max-width: 700px) {
-    .map__tag-name {
-      display: none; } }
+    .map {
+      margin-bottom: 7.2rem; } }
+  .map__img {
+    width: 100%; }
+  .map__tag {
+    height: 1px;
+    width: 1px;
+    position: absolute; }
+    @media only screen and (max-width: 1100px) {
+      .map__tag {
+        transform: translateY(-5px); } }
+    @media only screen and (max-width: 700px) {
+      .map__tag {
+        display: none; } }
+    .map__tag::before {
+      content: "";
+      position: absolute;
+      left: -2rem;
+      top: -2rem;
+      width: 4rem;
+      height: 2rem;
+      background-color: #fcb72b;
+      -webkit-clip-path: polygon(50% 100%, 0 0, 100% 0);
+      clip-path: polygon(50% 100%, 0 0, 100% 0); }
+      @media only screen and (max-width: 1100px) {
+        .map__tag::before {
+          left: -1rem;
+          top: -0.5rem;
+          width: 2rem;
+          height: 1rem; } }
+    .map__tag::after {
+      content: "";
+      position: absolute;
+      top: -8.9rem;
+      left: -9.45rem;
+      width: 18.9rem;
+      height: 7rem;
+      background-color: #fcb72b; }
+      @media only screen and (max-width: 1100px) {
+        .map__tag::after {
+          top: -3.4rem;
+          left: -6rem;
+          width: 12rem;
+          height: 3rem; } }
+    .map__tag#new-york {
+      bottom: 70%;
+      left: 21%; }
+    .map__tag#london {
+      top: 19%;
+      left: 44%; }
+    .map__tag#yokohama {
+      top: 30%;
+      right: 14%; }
+    .map__tag#jakarta {
+      right: 21.25%;
+      bottom: 38.5%; }
+  .map__tag-name {
+    position: absolute;
+    top: -7.35rem;
+    left: -9.45rem;
+    width: 18.9rem;
+    text-align: center;
+    font-size: 2.3rem;
+    z-index: 999; }
+    @media only screen and (max-width: 1100px) {
+      .map__tag-name {
+        font-size: 1.3rem;
+        left: -6rem;
+        width: 12rem;
+        top: -2.9rem; } }
+
+/*** LOCATIONS LIST ON MOBILE ***/
+.location-list {
+  display: none; }
+  @media only screen and (max-width: 700px) {
+    .location-list {
+      display: block;
+      max-width: 50rem;
+      margin: auto;
+      margin-top: 4rem; }
+      .location-list__item {
+        width: 100%;
+        background-color: #FFF4DF;
+        padding: 2.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .location-list__item:not(:last-child) {
+          margin-bottom: 1.6rem; } }
+
+/*** REQUEST SECTION ***/
+.request {
+  display: flex;
+  align-items: center; }
+  @media only screen and (max-width: 1100px) {
+    .request {
+      flex-direction: column;
+      text-align: center;
+      padding: 0 calc(12.6vw - 4rem);
+      max-width: 80rem;
+      margin: auto; } }
+  @media only screen and (max-width: 1100px) and (max-width: 700px) {
+    .request {
+      padding: 0; } }
+  .request__heading {
+    width: 24.4vw;
+    margin-right: 3rem; }
+    @media only screen and (max-width: 1100px) {
+      .request__heading {
+        width: 59.5vw;
+        margin-right: 0;
+        margin-bottom: 4rem;
+        max-width: 60rem; } }
+    @media only screen and (max-width: 700px) {
+      .request__heading {
+        width: 100%;
+        margin-bottom: 3.2rem; } }
+  .request__text {
+    width: 31vw; }
+    @media only screen and (max-width: 1100px) {
+      .request__text {
+        width: 100%;
+        margin-bottom: 4rem; } }
+    @media only screen and (max-width: 700px) {
+      .request__text {
+        margin-bottom: 3.2rem; } }
+  .request__btn {
+    margin-left: auto; }
+    @media only screen and (max-width: 1100px) {
+      .request__btn {
+        margin-left: 0; } }
+
+.jobs {
+  padding: 0 11.45vw 16rem; }
+  @media only screen and (max-width: 1100px) {
+    .jobs {
+      margin-top: -2.5rem;
+      padding: 0 4rem 12rem; } }
+  @media only screen and (max-width: 700px) {
+    .jobs {
+      padding: 0 3.2rem 12rem;
+      max-width: 55rem;
+      margin: auto; } }
+  .jobs__listing {
+    background-color: #F2F5F9;
+    padding: 3.7rem 6.4rem 3.7rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    @media only screen and (max-width: 1100px) {
+      .jobs__listing {
+        padding: 3.7rem 4.8rem; } }
+    @media only screen and (max-width: 700px) {
+      .jobs__listing {
+        flex-direction: column;
+        text-align: center;
+        padding: 3.6rem 3.2rem 3.2rem; } }
+    .jobs__listing:not(:last-child) {
+      margin-bottom: 2.4rem; }
+      @media only screen and (max-width: 1100px) {
+        .jobs__listing:not(:last-child) {
+          margin-bottom: 1.6rem; } }
+  .jobs__title {
+    margin-bottom: 0.8rem; }
+    @media only screen and (max-width: 700px) {
+      .jobs__title {
+        font-size: 1.8rem !important;
+        letter-spacing: -0.8px !important;
+        line-height: 1.333 !important;
+        margin-bottom: 0.4rem; } }
+  .jobs__location {
+    color: #495567; }
+    @media only screen and (max-width: 700px) {
+      .jobs__location {
+        margin-bottom: 1.6rem; } }
+  @media only screen and (max-width: 700px) {
+    .jobs__btn {
+      align-self: stretch;
+      padding: 1.4rem 0; } }
