@@ -494,6 +494,8 @@ h4 {
     transform: translateX(-50%);
     background-color: #fcb72b;
     padding: 3.4rem;
+    width: 9.6rem;
+    height: 9.6rem;
     border-radius: 50%; }
   .features__title {
     margin-bottom: 2.7rem; }
