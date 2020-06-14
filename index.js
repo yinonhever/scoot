@@ -24,14 +24,26 @@ $(".header__btn").on("click", function () {
 // ANIMATING THE ITEMS INSIDE THE MOBILE MENU
 
 if ($(window).width() <= 700) {
-    var delay = 0.2;
+    animateMenuItems();
+}
+
+$(window).resize(function () {
+    if ($(window).width() <= 700) {
+        animateMenuItems();
+    }
+})
+
+function animateMenuItems() {
+    let delay = 0.2;
 
     $(".header__nav-link").each(function () {
-        $(this).css("transition", "all 0.4s " + delay + "s");
+        $(this).css("animation", "slideLeft 0.4s " + delay + "s");
+        $(this).css("animation-fill-mode", "backwards");
         delay = delay + 0.2;
     })
 
-    $(".header__btn").css("transition", "all 0.4s " + delay + "s");
+    $(".header__btn").css("animation", "slideLeft 0.4s " + delay + "s");
+    $(".header__btn").css("animation-fill-mode", "backwards");
 }
 
 

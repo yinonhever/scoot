@@ -1,3 +1,16 @@
+@keyframes slideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(3rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
 @keyframes slideUp {
   0% {
     opacity: 0;

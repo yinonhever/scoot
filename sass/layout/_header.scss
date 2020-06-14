@@ -113,9 +113,10 @@
     &__nav-link {
       color: $color-grey-light;
       font-size: 1.8rem;
-      visibility: hidden;
-      opacity: 0;
-      transform: translateX(3rem);
+      display: none;
+      // visibility: hidden;
+      // opacity: 0;
+      // transform: translateX(3rem);
 
       &:not(:last-child) {
         margin-right: 0;
@@ -129,16 +130,18 @@
       align-self: stretch;
       padding-left: 0;
       padding-right: 0;
-      visibility: hidden;
-      opacity: 0;
-      transform: translateX(3rem);
+      display: none;
+      // visibility: hidden;
+      // opacity: 0;
+      // transform: translateX(3rem);
     }
 
     &__navigation.open &__nav-link,
     &__navigation.open &__btn {
-      visibility: visible;
-      opacity: 1;
-      transform: translateX(0);
+      display: block;
+      // visibility: visible;
+      // opacity: 1;
+      // transform: translateX(0);
     }
   }
 }

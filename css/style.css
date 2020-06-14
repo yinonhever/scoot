@@ -72,6 +72,14 @@ h4 {
 .section-heading {
   text-align: center; }
 
+@keyframes slideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(3rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
 @keyframes slideUp {
   0% {
     opacity: 0;
@@ -398,9 +406,7 @@ h4 {
       .header__nav-link {
         color: #E5ECF4;
         font-size: 1.8rem;
-        visibility: hidden;
-        opacity: 0;
-        transform: translateX(3rem); }
+        display: none; }
         .header__nav-link:not(:last-child) {
           margin-right: 0;
           margin-bottom: 2.4rem; }
@@ -410,14 +416,10 @@ h4 {
         align-self: stretch;
         padding-left: 0;
         padding-right: 0;
-        visibility: hidden;
-        opacity: 0;
-        transform: translateX(3rem); }
+        display: none; }
       .header__navigation.open .header__nav-link,
       .header__navigation.open .header__btn {
-        visibility: visible;
-        opacity: 1;
-        transform: translateX(0); } }
+        display: block; } }
 
 .page-heading {
   position: relative;
@@ -845,6 +847,7 @@ h4 {
       .icons-section__title {
         margin-bottom: 2.4rem; } }
 
+/*** FAQ SECTION ***/
 .faq {
   padding: 0 11.45vw 10rem; }
   @media only screen and (max-width: 1100px) {
@@ -1032,6 +1035,7 @@ h4 {
       .request__btn {
         margin-left: 0; } }
 
+/*** JOB LISTINGS ***/
 .jobs {
   padding: 0 11.45vw 16rem; }
   @media only screen and (max-width: 1100px) {
