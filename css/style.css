@@ -335,20 +335,20 @@ h4 {
   display: flex;
   align-items: center;
   /*** MOBILE VIEW ***/ }
+  @media only screen and (max-width: 1100px) {
+    .header {
+      padding: 2.1rem 4rem; } }
   .header.sticky {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     background-color: rgba(255, 255, 255, 0.9);
-    padding-top: 1.2rem !important;
-    padding-bottom: 1.2rem !important;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 3px 13px 1px;
     animation: appearFromTop 0.6s;
-    z-index: 999; }
-  @media only screen and (max-width: 1100px) {
-    .header {
-      padding: 2.1rem 4rem; } }
+    z-index: 99999; }
   .header__nav-toggle {
     display: none; }
   .header__navigation {
