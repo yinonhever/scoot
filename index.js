@@ -1,3 +1,23 @@
+// STICKY HEADER
+
+let height = $(".header").css("height");
+
+$(window).resize(function () {
+    height = $(".header").css("height");
+})
+
+$(window).scroll(function() {
+    if($(this).scrollTop() > 200) {
+        $(".header").addClass("sticky");
+        $("body").css("margin-top", height);
+    }
+    else {
+        $(".header").removeClass("sticky");
+        $("body").css("margin-top", 0);
+    }
+})
+
+
 // MANAGING THE MOBILE MENU
 
 $(".header__nav-toggle").on("click", function () {
